@@ -53,13 +53,11 @@ void loop()
   int i = 0;                            // initializes i
   if (buttonState == HIGH) {            // if button is press then do the following
     digitalWrite(boardLED, HIGH);       // turns on the board LED
-    while( i < 256) {                   // until i is equal to 256, do the following
+    for(int i = 0; i < 256; i++) {      // until i is equal to 256, do the following
       analogWrite(ledPin, i);           // turn the green led to the value of i
-      delay(10);                        // delay 10 milliseconds
-      i++;                              // increment i
+      delay(10);                        // delay for ten milliseconds
     }
-    i=0;                                // reset i
-    analogWrite(ledPin, i);             // turn off LED
+    analogWrite(ledPin, 0);             // turn off LED
 
   } else {
     digitalWrite(boardLED, LOW);        // if button is not pressed, turn off the Arduino LED

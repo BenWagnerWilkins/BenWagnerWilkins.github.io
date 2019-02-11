@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Ben's HCDE 439 Physical Computing Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Ben's Assignment 4: Transistors</h1>
+            <h2>Schematic with Calculations</h2>
+            <p>
+            <img src="assignment4imgs/schematic.png" width=400></a>
+            </p>
+            <p>
+              Here is the schematic and calculations. I calculated that the current going through the transistor is about .435A. I'm honestly very confused about all the calculations and transistors in general, but I hope this is right.
+            </p>
+            <h2>Circuit</h2>
+            <p>
+            <img src="assignment4imgs/circuit.jpeg" width=400></a>
+            </p>
+            <p>
+              Here is a picture of my circuit. I am only using 2 pins, the 2 pin for the button sensor, and the 9 pin to change the brightness of the LED strip.
+            </p>
+
+            <h2>Code Snippet</h2>
+            <code>
+              <pre>
+int button = 2; //pin for button
+
+int LEDControl = 9; // transistor control for LED strip
+int brightness = 0; // initial brightness level
+// the setup routine runs once when you press reset:
+void setup() {
+  pinMode(button, INPUT); //button is input
+  pinMode(LEDControl, OUTPUT); // LED is output
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+  // read the state of the button and check if it is pressed
+  if (digitalRead(button) == HIGH && brightness < 255){ //if button is press and is under maximum brightness then do the following
+      analogWrite(LEDControl, brightness); // sets the LED Strip brightness
+      brightness += 5; // increases brightness level
+      delay(50); // 50 ms delay
+   } else if (brightness > 0) { //if button is not pressed and brighness is not zero (to preven from wrapping around)
+      analogWrite(LEDControl, brightness - 5); // sets brightness (subtract 5 so it turns all the way off)
+      brightness -= 5; // decrease brightness level
+      delay(50); // 50 ms delay
+   }
+
+  delay(1);        // delay in between reads for stability
+}
+              </pre>
+            </code>
+
+            <h2>Here it is in Action!</h2>
+            <img src="assignment4imgs/video.gif" width=400>
+            <p>
+              While the button is pressed, the LED strip gets brighter. When you let go, the LED strip starts to dim.
+            </p>
+        </div>
+
+    </body>
+</html>

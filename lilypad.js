@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var fadeTime = 500;
-  var runTime = 20000; //20 seconds
+  var runTime = 10000; //20 seconds
   var stop = false;
 
   function changeGrey() {
@@ -105,7 +105,7 @@ function calcSpeed(prev, next) {
 
   var greatest = x > y ? x : y;
 
-  var speedModifier = .085;
+  var speedModifier = .1;
 
   var speed = Math.ceil(greatest / speedModifier);
 

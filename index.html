@@ -1,91 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Ben Wagner-Wilkins</title>
+  </head>
+  <body>
 
-        <title>Ben's HCDE 439 Physical Computing Page!</title>
+    <h1 class="text-center">Welcome to proJECT active!</h1>
+    <p class="subscript text-center">Select a game you'd like to play!</p>
 
-        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
-
-    </head>
-    <body>
-
-        <div class="header">
-            <h1>Ben's HCDE 439 Physical Computing Page!</h1>
-            <p>
-            <a><img src="self.jpg" width=400></a>
-            </p>
-            <p>
-            My name is Ben Wagner-Wilkins! I am originally from Texas, and I am really excited these final two quarters because I only have to take HCDE classes, so I finally get to be creative full time.
-            </p>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <a href="lilypad.html">
+            <div class="img_wrap">
+              <img class="img-fluid" src="lilypadIcon.png" alt="lilypad game">
+              <div class="overlay"><div class="game-description">Hop on the lilies and try to remember the most valuable ones!</div></div>
+            </div>
+          <h2 class="text-center">Hoppin' Lilies</h2></a>
         </div>
-        <div class="assignments">
+        <div class="col-lg-4">
 
-            <div class="assignment">
-              <a href="assignment0.html"><h2>Assignment 0: Getting Started!</h2>
-                  <img src="arduinoTestCover.jpeg" width=250></a>
-                <p>
-		               Assignment 0 was quick and easy
-                </p>
+          <a href="rugGame.png">
+            <div class="img_wrap">
+              <img class="img-fluid" src="exerciseFloor.png" alt="floor exercise game">
+              <div class="overlay"><div class="game-description">Follow the character's moves to earn a dance party!</div>
             </div>
+            </div>
+          <h2 class="text-center">Rug Exercise</h2></a>
+        </div>
+        <div class="col-lg-4">
 
-            <div class="assignment">
-              <a href="assignment1.html"><h2>Assignment 1: Blink!</h2>
-                  <img src="blink.gif" width=250></a>
-                <p>
-		              An introductory excercise for coding in Arduino
-                </p>
+          <a href="slime.png">
+            <div class="img_wrap">
+              <img class="img-fluid" src="slimeThumbnail.png" alt="Slime Game Thumbnail">
+              <div class="overlay"><div class="game-description">Stay on the rocks to avoid falling in the slime!</div>
             </div>
-            <div class="assignment">
-              <a href="assignment2.html"><h2>Assignment 2: Fade!</h2>
-                  <img src="assignment2imgs/video.gif" width=250></a>
-                <p>
-		              Fading in an LED at the press of a button
-                </p>
             </div>
-            <div class="assignment">
-              <a href="assignment3.html"><h2>Assignment 3: Input Output!</h2>
-                  <img src="assignment3imgs/video.gif" width=250></a>
-                <p>
-		              Switching between blue and red with a photoresistor
-                </p>
-            </div>
-            <div class="assignment">
-              <a href="assignment4.html"><h2>Assignment 4: Transistors!</h2>
-                  <img src="assignment4imgs/video.gif" width=250></a>
-                <p>
-		              Using a button and a transistor to increase the brightness of and LED strip
-                </p>
-            </div>
-            <div class="assignment">
-              <a href="assignment5.html"><h2>Assignment 5: Motors!</h2>
-                  <img src="assignment5imgs/video.gif" width=250></a>
-                <p>
-		              Using a joystick to increase and decrease the speed of a DC motor
-                </p>
-            </div>
-            <div class="assignment">
-              <a href="assignment6.html"><h2>Assignment 6: Datalogging!</h2>
-                  <img src="assignment6imgs/video.gif" width=250></a>
-                <p>
-		              Using a joystick to change the dimensions of a rectangle
-                </p>
-            </div>
-            <div class="assignment">
-              <a href="soldering.html"><h2>Soldering!</h2>
-                  <img src="solderingImgs/solder1.jpeg" width=250></a>
-                <p>
-		              Melting metal to other metals
-                </p>
-            </div>
-            <div class="assignment">
-              <a href="finalProject.html"><h2>Final Project</h2>
-                  <img src="finalimgs/bear2.jpeg" width=250></a>
-                <p>
-		              Terror Bear!
-                </p>
-            </div>
-	</div>
-    </body>
+          <h2 class="text-center">Slime'd</h2></a>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
